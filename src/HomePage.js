@@ -2,16 +2,31 @@ import React from "react";
 
 
 
-function HomePage() {
+function HomePage({technologies}) {
 
+
+        let backEndTech = technologies.filter((eachTech) => {
+            if (eachTech.type === "Back") {
+                return <TechCard 
+                            name={eachTech.name}
+                            image={eachTech.image}/>
+            }})
+        let frontEndTech = technologies.filter((eachTech) => {
+                    if (eachTech.type === "Front"){
+                    return <TechCard 
+                                name={eachTech.name}
+                                image={eachTech.image}
+                            />
+                        } 
+                    }
+                            )
 
 
 
 
     return (
-        <div>
-            
-        </div>
+        <TechCardContainer back={backEndTech} front={frontEndTech}/>
+
     )
 }
 

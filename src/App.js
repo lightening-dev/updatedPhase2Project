@@ -27,9 +27,8 @@ function App() {
   return ( 
             <div>
               <NavBar />
-              <FrontEndTechCards technologies={technologies} />
-              <BackEndTechCards technologies={technologies}/> 
-              <HomePage />
+              
+              <HomePage technologies={technologies} />
               <CardFormSubmitPage newTechHandler={newTechHandler}/>
               <div>
                     
