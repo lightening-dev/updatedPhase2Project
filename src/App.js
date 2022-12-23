@@ -9,7 +9,7 @@ import Login from './Login';
 
 function App() {
 
-  
+  const [newTech, setHandleNewTech] = useState({})
   const [technologies, setTechnologies] = useState([]);
   
   
@@ -20,13 +20,17 @@ function App() {
       .then((data) => setTechnologies(data))
   }, []) 
 
+  function newTechHandler(newTech) {
+    setHandleNewTech([...newTech, newTech])
+  }
+
   return ( 
             <div>
               <NavBar />
               <FrontEndTechCards technologies={technologies} />
               <BackEndTechCards technologies={technologies}/> 
               <HomePage />
-              <CardFormSubmitPage />
+              <CardFormSubmitPage newTechHandler={newTechHandler}/>
               <div>
                     
               </div>

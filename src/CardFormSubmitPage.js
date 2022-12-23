@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 
-function CardFormSubmitPage({}) {
+function CardFormSubmitPage({newTechHandler}) {
 
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
+    const [type, setTypeofTech] = useState("");
 
     
     const submitedTech = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, image: image })
+        body: JSON.stringify({ name: name, image: image , type: type})
+    }
     
-    function handleSubmit(event) {
+    function handleSubmit() {
             
         fetch('http://localhost:3000', submitedTech)
         .then((response) => response.json())
-        .then((data) => console.log(data)) 
+        .then((data) => newTechHandler(data)) 
     }
     return (
         
@@ -30,6 +32,11 @@ function CardFormSubmitPage({}) {
                 Image Address:
                 <input type="text" name="ImageAddress" onChange={(event) => setImage(event.target.value)} />
             </label>
+            
+                <select value={this.state.value} onChange={setTypeofTech(value)}>
+                    <option value="Front">Front End Technology</option>
+                    <option value="Back">Back End Technology</option>
+                </select>
             <input type="submit" value="Submit" />
         </form>
 
