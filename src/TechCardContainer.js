@@ -1,8 +1,8 @@
 import React from "react";
 
-function TechCardContainer({front, back}) {
+function TechCardContainer({}) {
 
-            
+
 
 
     return( )

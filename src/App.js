@@ -9,7 +9,7 @@ import Login from './Login';
 
 function App() {
 
-  const [newTech, setHandleNewTech] = useState({})
+  
   const [technologies, setTechnologies] = useState([]);
   
   
@@ -21,7 +21,7 @@ function App() {
   }, []) 
 
   function newTechHandler(newTech) {
-    setHandleNewTech([...newTech, newTech])
+    setTechnologies([...technologies, newTech])
   }
 
   return ( 
