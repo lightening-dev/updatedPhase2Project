@@ -25,6 +25,10 @@ function App() {
   }
 
   return ( 
+      <>
+      <nav>
+        
+      </nav>
             <div>
               <NavBar />
               
@@ -34,7 +38,7 @@ function App() {
                     
               </div>
             </div>
-            
+            </>
         ) ;
 }
 
