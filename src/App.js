@@ -6,6 +6,7 @@ import CardContainer from "./CardFormSubmitPage";
 import FrontEndTechCards from "./FrontEndTechCard";
 import HomePage from "./HomePage";
 import Login from './Login';
+import {Route, Routes} from "react-router-dom"
 
 function App() {
 
@@ -27,13 +28,18 @@ function App() {
   return ( 
       <>
       <nav>
-        
+        <li><Link to="/"></Link>Home</li>
+        <li></li>
+
       </nav>
             <div>
-              <NavBar />
+              <Routes>
+                 <Route path="/" element={<HomePage technologies={technologies}/>}/>
+                  <Route path="/submit" element={<CardFormSubmitPage newTechHandler={newTechHandler}/>}/>
+                  
+                  <CardFormSubmitPage newTechHandler={newTechHandler}/>
+              </Routes>
               
-              <HomePage technologies={technologies} />
-              <CardFormSubmitPage newTechHandler={newTechHandler}/>
               <div>
                     
               </div>
