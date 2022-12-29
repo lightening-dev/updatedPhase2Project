@@ -1,11 +1,27 @@
 import React from "react";
+import { useState } from "react";
 
-function TechCardContainer({}) {
+function TechCardContainer({backEndTech, frontEndTech}) {
 
+        
+    
+    
+    
+    
+    
+    const {toggleBtn, setToggleBtn} = useState(false);
 
+        function handleClick() {
+            if (toggleBtn === false) {
+                return !toggleBtn;
+            }
+        }
 
-
-    return( )
+    return( <div>
+                <btn>
+                    {toggleBtn ? backEndTech : frontEndTech}
+                </btn>
+        </div>)
 
 
 }
