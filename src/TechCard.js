@@ -12,4 +12,4 @@ function TechCard({name, image}) {
     );
 }
 
-export default TechContainerCard; 
+export default TechCard; 

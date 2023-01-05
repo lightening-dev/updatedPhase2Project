@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function HomePage({technologies}) {
+function HomePage() {
 
 
    
@@ -11,7 +11,9 @@ function HomePage({technologies}) {
 
 
     return (
-       
+       <>
+       <h1>Welcome to my Phase 2 project!!</h1>
+       </>
 
     )
 }

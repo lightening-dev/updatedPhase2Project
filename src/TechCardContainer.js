@@ -18,7 +18,7 @@ function TechCardContainer({backEndTech, frontEndTech}) {
         }
 
     return( <div>
-                <btn>
+                <btn onClick={(e) => handleClick(e)}>
                     {toggleBtn ? backEndTech : frontEndTech}
                 </btn>
         </div>)
