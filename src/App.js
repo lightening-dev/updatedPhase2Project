@@ -22,25 +22,21 @@ function App() {
   console.log(technologies);
 
   let backEndTech = technologies.filter((eachTech) => {
-    if (eachTech.type === "Back") {
+    eachTech.type === "Back"
       return <TechCard
         name={eachTech.name}
         image={eachTech.image} />
-        
-    }
-   else {};
-  })
+        })
 
   console.log(backEndTech);
 
   let frontEndTech = technologies.filter((eachTech) => {
-    if (eachTech.type === "Front") {
+    eachTech.type === "Front"
       return <TechCard
         name={eachTech.name}
         image={eachTech.image}
       />
-    }
-  }
+                  }
   )
 
   function newTechHandler(newTech) {
